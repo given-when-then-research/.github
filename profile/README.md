@@ -39,7 +39,7 @@ The [Zenodo package](https://zenodo.org/records/17573782) includes the final dat
 If you use GWT in your research, please cite the paper.
 
 ```bibtex
-@inproceedings{junior2026givenwhenthen,
+@inproceedings{givenwhenthendatasetmsr,
   author    = {J{\'u}nior, Luciano Belo de Alc{\^a}ntara and Montandon, Jo{\~a}o Eduardo},
   title     = {{GivenWhenThen}: A Dataset of {BDD} Test Scenarios Mined from Open Source Projects},
   booktitle = {Proceedings of the 23rd International Conference on Mining Software Repositories},
@@ -56,4 +56,4 @@ If you use GWT in your research, please cite the paper.
 }
 ```
 
-**Dataset DOI (v2)** · [`10.5282/zenodo.17517697`](https://zenodo.org/records/17573782)
+**Dataset DOI** · [`10.5282/zenodo.17517697`](https://zenodo.org/records/17573782)
