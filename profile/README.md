@@ -1,11 +1,13 @@
 # GivenWhenLab
 
-**GivenWhenThen (GWT)** is a dataset of **2,289 Behavior-Driven Development (BDD) test scenarios** mined from **1,720 open-source GitHub projects**. It connects each scenario's Gherkin specification to the code that implements its steps and the system code those steps use.
+**GivenWhenThen (GWT)** is a research dataset of **2,289 Behavior-Driven Development (BDD) test scenarios** built from **1,720 selected open-source GitHub projects**. It links each scenario's Gherkin specification to the code implementing its steps and the system code used by those implementations.
 
-[![Dataset DOI](https://zenodo.org/badge/DOI/10.5282/zenodo.17517697.svg)](https://zenodo.org/records/17573782)
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5282/zenodo.17517697.svg)](https://doi.org/10.5282/zenodo.17517697)
 [![Paper at MSR 2026](https://img.shields.io/badge/Paper-MSR%202026-316A9A)](https://doi.org/10.1145/3793302.3793308)
 
-[Dataset and replication package on Zenodo](https://zenodo.org/records/17573782) · [MSR 2026 paper](https://doi.org/10.1145/3793302.3793308) · [Project website](https://givenwhenlab.github.io/)
+
+
+[Dataset and replication package on Zenodo](https://zenodo.org/records/17573782) · [MSR 2026 paper](https://doi.org/10.1145/3793302.3793308)
 
 ## What's in the dataset?
 
@@ -23,13 +25,23 @@ These links support empirical studies of BDD, research on test automation, and t
 
 <img width="2280" height="482" alt="Image" src="https://github.com/user-attachments/assets/378c4ae1-21a0-4099-98c3-0daa0c1bae11" />
 
-1. **Projects Discovery.**  Miner cucumber/bdd projects
-2. **Projects Selection.** Clone and filter valid repositories: at least one .feature file, with valid features in English and that use the official Cucumber library
-3. **Step Definitions Extraction Heuristic.** Exploration & exploitation heuristics to extract step definition/glue code file
-4. **Integration and refinement** Comparison -> validation -> cleaning -> unification
-5. **System Code Detection.** Get all system code to entries and generate final dataset
 
-The [Zenodo package](https://zenodo.org/records/17573782) includes the final dataset, intermediate outputs, heuristic evaluation samples, and source code archives for each stage.
+1. **[Projects Discovery](https://github.com/given-when-then-research/projects-discovery)**  
+   Mine GitHub for projects using Cucumber and BDD, identifying **4,327 candidate repositories**.
+
+2. **[Projects Selection](https://github.com/given-when-then-research/projects-selection)**  
+   Clone and filter candidate repositories, retaining projects with valid English-language `.feature` files and an official Cucumber dependency. This stage selected **1,720 projects**.
+
+3. **[Step Definitions Extraction Heuristic](https://github.com/given-when-then-research/step-definitions-extraction-heuristic)**  
+   Apply **Exploration** and **Exploitation** heuristics to link Gherkin steps to their corresponding step definitions (glue code).
+
+4. **[Integration and Refinement](https://github.com/given-when-then-research/integration-and-refinement)**  
+   Compare, validate, clean, and consolidate heuristic outputs into a unified set of scenario-to-step-definition mappings.
+
+5. **[System Code Detection](https://github.com/given-when-then-research/system-code-detection)**  
+   Identify relevant application source files used by the step definitions and assemble the final dataset of **2,289 BDD scenarios**.
+
+The [Zenodo replication package](https://zenodo.org/records/17573782) provides the final dataset, intermediate outputs, heuristic validation samples, and source code archives for the pipeline stages.
 
 ## Citation
 
