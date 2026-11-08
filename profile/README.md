@@ -2,8 +2,6 @@
 
 **GivenWhenThen (GWT)** is a dataset of **2,289 Behavior-Driven Development (BDD) test scenarios** mined from **1,720 open-source GitHub projects**. It connects each scenario's Gherkin specification to the code that implements its steps and the system code those steps use.
 
-<img width="2280" height="482" alt="Image" src="https://github.com/user-attachments/assets/378c4ae1-21a0-4099-98c3-0daa0c1bae11" />
-
 [![Dataset DOI](https://zenodo.org/badge/DOI/10.5282/zenodo.17517697.svg)](https://zenodo.org/records/17573782)
 [![Paper at MSR 2026](https://img.shields.io/badge/Paper-MSR%202026-316A9A)](https://doi.org/10.1145/3793302.3793308)
 
@@ -23,14 +21,13 @@ These links support empirical studies of BDD, research on test automation, and t
 
 ## How we built GWT
 
-<!-- Save your diagram as profile/assets/gwt-pipeline.svg, then uncomment the line below. -->
-<!-- ![Five stages of the GivenWhenThen data collection pipeline](assets/gwt-pipeline.svg) -->
+<img width="2280" height="482" alt="Image" src="https://github.com/user-attachments/assets/378c4ae1-21a0-4099-98c3-0daa0c1bae11" />
 
-1. **Discover projects.** Search GitHub for repositories that declare Cucumber as a dependency and contain Gherkin feature files.
-2. **Select projects.** Validate feature files, identify English-language scenarios, and confirm use of an official Cucumber library.
-3. **Extract step definitions.** Use two heuristics, *Exploitation* and *Exploration*, to link feature steps to their implementations.
-4. **Integrate and refine.** Combine the results into a consolidated set of feature and step definition pairs.
-5. **Detect system code.** Identify the application source files used by the step definitions to complete the dataset records.
+1. **Projects Discovery.**  Miner cucumber/bdd projects
+2. **Projects Selection.** Clone and filter valid repositories: at least one .feature file, with valid features in English and that use the official Cucumber library
+3. **Step Definitions Extraction Heuristic.** Exploration & exploitation heuristics to extract step definition/glue code file
+4. **Integration and refinement** Comparison -> validation -> cleaning -> unification
+5. **System Code Detection.** Get all system code to entries and generate final dataset
 
 The [Zenodo package](https://zenodo.org/records/17573782) includes the final dataset, intermediate outputs, heuristic evaluation samples, and source code archives for each stage.
 
